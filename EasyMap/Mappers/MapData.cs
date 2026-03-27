@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Reflection;
 using System.Text;
 
-namespace EasyMap
+namespace EasyMap.MapData
 {
     public class MapData<TSource, TDestination> : IMapData<TSource, TDestination>
       where TSource : class
@@ -47,5 +48,12 @@ namespace EasyMap
 
             return destination;
         }
+
+
+        
+
+
+
+
     }
 }

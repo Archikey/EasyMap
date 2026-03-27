@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EasyMap
+namespace EasyMap.MapData
 {
 
     /// <summary>
@@ -19,5 +19,7 @@ namespace EasyMap
 
 
         TDestination Map(TSource source);
+
+      
     }
 }
