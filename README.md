@@ -6,12 +6,37 @@ It allows you to map data between two objects with minimal configuration — no 
 
 ---
 
+## 🆕 Updates
+
+### Update 1 — v0.1.3
+
+* Added **dynamic object creation** via `CreateCustomObject`
+* Allows building objects from key-value pairs
+* Useful for flexible and runtime scenarios
+
+Example:
+
+```csharp
+using EasyMap;
+
+var factory = new ObjectFactory();
+
+var obj = factory.CreateCustomObject(new Dictionary<string, object?>
+{
+    ["Name"] = "Alex",
+    ["Age"] = 25
+});
+```
+
+---
+
 ## ✨ Features
 
 * Simple and minimal API
 * No external dependencies
 * Reflection-based mapping
 * Copies only matching properties (by name and type)
+* Dynamic object creation support
 * Safe and predictable behavior
 
 ---
@@ -70,7 +95,6 @@ EasyMap:
 
 * Creates a new instance of the destination type
 * Finds properties with:
-
   * the same name
   * the same type
 * Copies values from source to destination
@@ -102,12 +126,37 @@ MIT License
 
 ---
 
+## 🆕 Обновления
+
+### Обновление 1 — v0.1.3
+
+* Добавлено создание **динамических объектов** через `CreateCustomObject`
+* Позволяет собирать объект из набора ключ-значение
+* Полезно для гибких и runtime-сценариев
+
+Пример:
+
+```csharp
+using EasyMap;
+
+var factory = new ObjectFactory();
+
+var obj = factory.CreateCustomObject(new Dictionary<string, object?>
+{
+    ["Name"] = "Alex",
+    ["Age"] = 25
+});
+```
+
+---
+
 ## ✨ Возможности
 
 * Простой и понятный API
 * Без внешних зависимостей
 * Маппинг через reflection
 * Копирование только совпадающих свойств (по имени и типу)
+* Поддержка создания динамических объектов
 * Предсказуемое поведение
 
 ---
@@ -166,7 +215,6 @@ EasyMap:
 
 * Создаёт новый объект целевого типа
 * Находит свойства с:
-
   * одинаковым именем
   * одинаковым типом
 * Копирует значения
